@@ -10,7 +10,8 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro C, N, E, salario
+		inteiro N, E, salario
+		cadeia C
 		E=0
 		
 		escreva("Digite o códogo do operário: ")
@@ -38,7 +39,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 999; 
+ * @POSICAO-CURSOR = 512; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
