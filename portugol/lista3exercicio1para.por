@@ -10,12 +10,12 @@ d) percentual de pessoas com salário até R$100,00.
 	
 	funcao inicio()
 	{
-		const inteiro TOTAL_HABITANTES = 5
+		const inteiro TOTAL_HABITANTES = 20
 		inteiro salario, filhos
-		real totalSalario=0, totalFilhos=0
+		real totalSalario=0.00, totalFilhos=0.00
 		inteiro maiorSalario = 0
 		real mediaSalario, mediaFilhos, percentualHabitantes
-		real contador=0
+		real contador=0.00
 
 		para (inteiro x = 0; x < TOTAL_HABITANTES; x++){
 			escreva("Digite o salário: ")
@@ -26,10 +26,15 @@ d) percentual de pessoas com salário até R$100,00.
 			totalSalario += salario
 			totalFilhos += filhos
 
+			se(maiorSalario < salario){
+				maiorSalario = salario
+				}
+
 			se (salario <= 100){
 				contador++
 				}
 			}
+
 			
 		mediaSalario = totalSalario/TOTAL_HABITANTES
 		mediaFilhos = totalFilhos/TOTAL_HABITANTES
@@ -37,6 +42,7 @@ d) percentual de pessoas com salário até R$100,00.
 
 		escreva("Média salarial: R$" ,mediaSalario)
 		escreva("\nMédia de Filhos: " ,mediaFilhos)
+		escreva("\nMaior salário: R$" ,maiorSalario ,",00")
 		escreva("\nHabitantes com salário de até R$100,00: " ,percentualHabitantes ,"%.")
 		
 	}
@@ -46,7 +52,7 @@ d) percentual de pessoas com salário até R$100,00.
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1066; 
+ * @POSICAO-CURSOR = 375; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
