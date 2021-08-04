@@ -27,22 +27,24 @@ public class exercicioIR03082021 {
 		
 		if(salarioBruto <= 2000) {
 			System.out.printf("%s %s. Seu salário é isento de imposto.",saudacao, nome);
-		} else if(salarioBruto >= 2000 && salarioBruto <= 5000) {
+			
+		} else if(salarioBruto > 2000 && salarioBruto <= 5000) {
 			imposto = salarioBruto*0.15;
 			salarioDeduzido = salarioBruto*0.85;
 			
-			System.out.printf("%s %s. Se imposto é de 15%",saudacao, nome);
-			System.out.printf("\nValor do imposto: %f ." ,imposto);
-			System.out.printf("\nSalário bruto com a dedução do imposto: %f ." ,salarioDeduzido);
+			System.out.printf("%s %s. Seu imposto é de 15 porcento.",saudacao, nome);
+			System.out.printf("\nValor do imposto: %.0f reais." ,imposto);
+			System.out.printf("\nSalário bruto com a dedução do imposto: %.0f reais." ,salarioDeduzido);
+			
 		} else if(salarioBruto > 5000) {
 			imposto = salarioBruto*0.25;
 			salarioDeduzido = salarioBruto*0.75;
 			
-			System.out.printf("%s %s. Se imposto é de 25%",saudacao, nome);
-			System.out.printf("\nValor do imposto: %f ." ,imposto);
-			System.out.printf("\nSalário bruto com a dedução do imposto: %f." ,salarioDeduzido);
+			System.out.printf("%s %s. Seu imposto é de 25 porcento.",saudacao, nome);
+			System.out.printf("\nValor do imposto: %.0f reais." ,imposto);
+			System.out.printf("\nSalário bruto com a dedução do imposto: %.0f reais." ,salarioDeduzido);
 			
 		}
-		
+		read.close();
 	}
 }
