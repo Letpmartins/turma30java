@@ -15,5 +15,6 @@ public class Idade {
 		idade = 2021 - anoNascimento;
 		
 		System.out.println("Olá, "+nome+". Você tem "+idade+" anos.");
+		leia.close();
 	}
 }

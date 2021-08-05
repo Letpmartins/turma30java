@@ -74,6 +74,8 @@ public class exemploLaco1 {
 		System.out.printf("Time: %s - Pontos: %d.\n", time2, ponto2);
 		System.out.printf("Time: %s - Pontos: %d.\n", time3, ponto3);
 		System.out.printf("Time: %s - Pontos: %d.\n", time4, ponto4);
+		
+		read.close();
 	}
 
 }
