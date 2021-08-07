@@ -1,3 +1,4 @@
+package projetoPortugol1ParaJava;
 import java.util.Scanner;
 
 public class ReiDoHamburger {
@@ -102,10 +103,27 @@ public class ReiDoHamburger {
 				//-----------------------------------------------------------------------------------------------
 				//---------------------------------  TIRAR COMPRAS DO ESTOQUE -----------------------------------
 				//-----------------------------------------------------------------------------------------------
+				if(qntdDigitada <= 0){
+		              System.out.println("ATENÇÃO! Quantidade Inválida.\nDigite uma quantidade maior que 0\n");
+		              } 
+				else if (estoque[produtoEscolhido] - qntdDigitada  < 0) {
+		            	  System.out.println("\nATENÇÃO! Quantidade Inválida.\nFavor escolher um produto que tenha no estoque, e uma quantidade disponível dele.\n");
+		            	  } 
+				else {
+					estoque[produtoEscolhido] = estoque[produtoEscolhido] - qntdDigitada;
+		            carrinho[produtoEscolhido] += qntdDigitada;
+		            qntdTotal += qntdDigitada;
+		            }
+				System.out.println("\nContinuar comprando? [S/N]: ");
+				comprarSN = leia.next().toUpperCase().charAt(0);
+				while (comprarSN =='S') {
+					for (int i = 0; i < qntdProdutos; i++) {
+						if (carrinho[i] > 0) {
+							total += carrinho[i] * valor[i];
+							}
+						}
+					}
 				
-				
-				
-			
 			} while(continuarCompra == 'S'); //FIM COMPRA ---------------------------------------------------
 			
 			//-----------------------------------------------------------------------------------------------

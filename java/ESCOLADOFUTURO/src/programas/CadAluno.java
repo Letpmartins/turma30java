@@ -14,6 +14,7 @@ public class CadAluno {
 				"Matheus de Brito Milani","Natália Regina dos Santos Rocha","Pamela Paulino","Renata dos Santos Ferreira","Rodrigo Roseo Lopes da Costa",
 				"Sabrina Alves de Paiva","Sergio de Jesus Severo","Stefani Fernanda Pereira Tosi","Talita gleice maria da gloria da Silva Lima",
 				"Thiago da Silva Machado","Vinícios Lisboa da Silva","Vinicius Cardoso Siqueira Francisco"};
+		
 		int notas[] = new int[alunes.length];
 		String matriculas[] = new String[alunes.length]; //MAT-0X
 		boolean ativo[] = new boolean[alunes.length]; //true
@@ -49,17 +50,16 @@ public class CadAluno {
 		
 		do {
 
-			System.out.println();
-			System.out.print("\nSeletione um alune pela matrícula: "); //seleciona o aluno
+			System.out.print("\n\nSeletione um alune pela matrícula: "); //seleciona o aluno
 			codigoMatricula = scan.next();
 			
 			for(int i=0; i<alunes.length; i++) {
 				if(codigoMatricula.equals(matriculas[i])) {
 					
-					System.out.printf("\nNome: %s", alunes[i]);
+					System.out.printf("Nome: %s", alunes[i]);
 					System.out.print("\nDigite a nota: "); //entra coma nota
 					notas[i] = scan.nextInt();
-					System.out.print("\nAlune ative? [S/N]: "); //define se ainda está ativo
+					System.out.print("Alune ative? [S/N]: "); //define se ainda está ativo
 					opAtividade = scan.next().toUpperCase().charAt(0);
 					
 					if(opAtividade != 'S'){
@@ -68,32 +68,33 @@ public class CadAluno {
 				}
 				
 			}
-			
+			System.out.println();
 			System.out.print("Continua? [S/N]:"); //segue o loop até dizer não
 			opContinua = scan.next().toUpperCase().charAt(0);
 		} while(opContinua == 'S');
 		
-		System.out.print("Matrícula \t Nome \t\t\t Nota \t Status");
+		System.out.print("Matrícula\tStatus\tNota\tNome");
 		for(int i=0; i<alunes.length; i++) {
 			if(notas[i] != 0) {
-				if(ativo[i] == true) {
-					System.out.printf("\n%s \t\t %s \t %d \t ativo",matriculas[i], alunes[i], notas[i]);
+				/*if(ativo[i] == true) {
+					System.out.printf("\n%s \t %s \t %d \t ativo",matriculas[i], alunes[i], notas[i]);
 				} else {
-					System.out.printf("\n%s \t\t %s \t %d \t inativo",matriculas[i], alunes[i], notas[i]);
-				}
-				
-				if(notas[i] <= 5) {
+					System.out.printf("\n%s \t%s \t %d \t inativo",matriculas[i], alunes[i], notas[i]);
+				}*/
+				System.out.printf("\n%s\t\t%s\t  %d\t%s",matriculas[i], ((ativo[i]==true)?"Ativo":"Inativo"), notas[i], alunes[i]);
+							
+				/*if(notas[i] <= 5) {
 					System.out.print("\tEstude mais.");
 				} else {
 					System.out.print("\tÓtimo. Continue assim.");
-				}
+				}*/
+				
+				System.out.printf("\n%s",((notas[i] <= 5)?"Estude mais":"Ótimo. Continue assim."));
 			}
-			
 			
 		}
 		
-		
-		
+		scan.close();
 	}
 
 }
