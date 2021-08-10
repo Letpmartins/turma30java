@@ -2,34 +2,41 @@ package listas.lista9.classes;
 
 public class Animal {
 	private String nome;
-	private String idade;
-	private boolean emiteSom;
+	private int idade;
 	
-	public Animal(String nome, String idade, boolean emiteSom) {
+	public Animal(String nome, int idade) {
 		super();
 		this.nome = nome;
 		this.idade = idade;
-		this.emiteSom = emiteSom;
 	}
+	
 	
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getIdade() {
+
+	public int getIdade() {
 		return idade;
 	}
-	public void setIdade(String idade) {
+
+	public void setIdade(int idade) {
 		this.idade = idade;
 	}
-	public boolean isEmiteSom() {
-		return emiteSom;
+
+
+
+	public void emiteSom() {
+		System.out.print("Emitindo som");
 	}
-	public void setEmiteSom(boolean emiteSom) {
-		this.emiteSom = emiteSom;
+	
+	public void seMovimenta() {
+		System.out.print("se movimentando.");
 	}
+	
 	
 	
 }

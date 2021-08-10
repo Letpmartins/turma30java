@@ -2,13 +2,18 @@ package listas.lista9.classes;
 
 public class Cachorro extends Animal {
 
-	
-	public Cachorro(String nome, String idade, boolean emiteSom) {
-		super(nome, idade, emiteSom);
+	public Cachorro(String nome, int idade) {
+		super(nome, idade);
 		// TODO Auto-generated constructor stub
 	}
-
-	public void corre() {
-		System.out.print("Correndo.");
+	
+	@Override
+	public void emiteSom() {
+		System.out.print("Au Au Au.\n");
+	}
+	
+	@Override
+	public void seMovimenta() {
+		System.out.print("Correndo.\n");
 	}
 }
