@@ -2,8 +2,8 @@ package classes;
 
 public class Funcionario {
 	private String matricula;
-	private int horasTrabalhadas;
-	private double valorPorHora;
+	protected int horasTrabalhadas;
+	protected double valorPorHora;
 	
 	public Funcionario(String matricula, int horasTrabalhadas, double valorPorHora) {
 		super();
