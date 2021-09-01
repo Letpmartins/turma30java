@@ -10,6 +10,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -21,7 +22,10 @@ public class Produto {
 	private long id;
 	
 	@NotBlank
+	@Size(max = 60)
 	private String nome;
+	
+	@Size(min = 3, max = 20)
 	private String marca;
 	
 	@NotNull
